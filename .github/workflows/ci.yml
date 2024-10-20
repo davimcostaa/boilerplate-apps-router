@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: CheckOut Repository
-      - user: actions/checkout@v3
-
+        uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -19,7 +18,7 @@ jobs:
         run: npm install
 
       - name: Linting dependencies
-        run: npm lint
+        run: npm run lint
 
       - name: Testing
         run: npm run test
